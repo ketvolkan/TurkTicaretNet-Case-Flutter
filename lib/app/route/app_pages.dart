@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../views/coffee_detail/coffee_detail_binding.dart';
+import '../views/coffee_detail/coffee_detail_view.dart';
 import '../views/home/home_page_bindings.dart';
 import '../views/home/home_page_view.dart';
 import '../views/splash/splash_page_binding.dart';
@@ -17,6 +19,12 @@ class AppPages {
       name: AppRoutes.HOME,
       page: () => const HomePageView(),
       binding: HomePageBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.CoffeeDetail,
+      page: () => const CoffeeDetailView(),
+      binding: CoffeeDetailBinding(),
+      transition: Transition.cupertino,
     ),
   ];
 }

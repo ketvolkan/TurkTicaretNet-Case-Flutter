@@ -1,7 +1,9 @@
-import '../../core/utils/utils.dart';
-import '../../core/variables/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../../core/utils/utils.dart';
+import '../../core/variables/colors.dart';
+import 'buttons/custom_icon_button.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   final List<Widget>? actions;
@@ -25,14 +27,17 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      automaticallyImplyLeading: automaticallyImplyLeading ?? true,
-      backgroundColor: Get.theme.backgroundColor,
-      title: title,
-      leading: showLeadingBackIcon ? leadingIcon() : customLeadingButton,
-      actions: actions ?? [drawingButton],
-      centerTitle: centerTitle,
-      elevation: 0,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: Utils.normalPadding),
+      child: AppBar(
+        automaticallyImplyLeading: automaticallyImplyLeading ?? true,
+        backgroundColor: Colors.transparent,
+        title: title,
+        leading: showLeadingBackIcon ? leadingIcon() : customLeadingButton,
+        actions: actions,
+        centerTitle: centerTitle,
+        elevation: 0,
+      ),
     );
   }
 
@@ -43,10 +48,12 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
         ),
         onTap: () {},
       );
-  IconButton leadingIcon() {
-    return IconButton(
-      icon: Icon(Icons.arrow_back_ios, color: Get.theme.appBarTheme.titleTextStyle!.color),
-      onPressed: onLeadingPressed ??
+
+  CustomIconButton leadingIcon() {
+    return CustomIconButton(
+      icon: Icons.arrow_back,
+      size: Utils.highIconSize,
+      onTap: onLeadingPressed ??
           () {
             Get.back();
           },

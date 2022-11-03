@@ -59,7 +59,7 @@ class CustomScaffold extends StatelessWidget {
   }
 
   Padding get bodyWithPadding => Padding(
-        padding: bodyPadding ?? EdgeInsets.symmetric(horizontal: Utils.highPadding),
+        padding: bodyPadding ?? EdgeInsets.symmetric(horizontal: Utils.normalPadding),
         child: body,
       );
 }

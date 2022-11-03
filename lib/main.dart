@@ -6,7 +6,7 @@ import 'app/route/app_routes.dart';
 import 'app/views/splash/splash_page_binding.dart';
 import 'theme/app_themes.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 

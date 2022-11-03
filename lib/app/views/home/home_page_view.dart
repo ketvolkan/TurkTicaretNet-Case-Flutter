@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/app/views/home/widgets/coffee_list_item.dart';
-import 'package:turkticaretnetcase/app/views/home/widgets/shop_list_item.dart';
-import 'package:turkticaretnetcase/app/widgets/custom_navigation_bar.dart';
-import 'package:turkticaretnetcase/app/widgets/custom_search_bar.dart';
-import 'package:turkticaretnetcase/app/widgets/custom_text.dart';
-import 'package:turkticaretnetcase/core/variables/colors.dart';
 
 import '../../../../../../core/utils/utils.dart';
+import '../../../core/variables/colors.dart';
+import '../../route/app_routes.dart';
+import '../../widgets/custom_navigation_bar.dart';
 import '../../widgets/custom_scaffold.dart';
+import '../../widgets/custom_search_bar.dart';
+import '../../widgets/custom_text.dart';
 import 'home_page_controller.dart';
+import 'widgets/coffee_list_item.dart';
+import 'widgets/shop_list_item.dart';
 
 class HomePageView extends GetView<HomePageController> {
   const HomePageView({Key? key}) : super(key: key);
@@ -75,7 +76,12 @@ class HomePageView extends GetView<HomePageController> {
             child: Obx(
               () => ListView.separated(
                 scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) => CoffeeListItem(coffeeModel: controller.coffeeList[index]),
+                itemBuilder: (context, index) => CoffeeListItem(
+                    coffeeModel: controller.coffeeList[index],
+                    onTap: () => Get.toNamed(
+                          AppRoutes.CoffeeDetail,
+                          arguments: {"coffeeModel": controller.coffeeList[index]},
+                        )),
                 separatorBuilder: (context, index) => SizedBox(width: Utils.normalPadding),
                 itemCount: controller.coffeeList.length,
               ),
@@ -83,6 +89,7 @@ class HomePageView extends GetView<HomePageController> {
           ),
         ],
       );
+
   Padding get searchBar => Padding(
         padding: EdgeInsets.symmetric(horizontal: Utils.normalPadding),
         child: CustomSearchBar(
@@ -93,6 +100,7 @@ class HomePageView extends GetView<HomePageController> {
           hintText: "Search anything",
         ),
       );
+
   Widget get topSection => Padding(
         padding: EdgeInsets.only(left: Utils.normalPadding, right: Utils.normalPadding, top: Utils.extraHighPadding),
         child: Row(

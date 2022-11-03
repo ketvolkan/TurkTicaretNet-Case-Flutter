@@ -2,11 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/core/utils/utils.dart';
-import '../../../widgets/custom_text.dart';
+
 import '../../../../core/constants/app_constants.dart';
 import '../../../../core/models/shop_model.dart';
+import '../../../../core/utils/utils.dart';
 import '../../../../core/variables/colors.dart';
+import '../../../widgets/custom_text.dart';
+import '../../../widgets/rating_text.dart';
 
 class ShopListItem extends StatelessWidget {
   final ShopModel shopModel;
@@ -17,20 +19,20 @@ class ShopListItem extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(child: imageSection()),
+        Expanded(child: imageSection),
         SizedBox(height: Utils.lowPadding),
         CustomText(shopModel.name, bold: true),
-        Row(
-          children: [
-            Icon(Icons.star, color: Colors.orangeAccent, size: Utils.lowIconSize),
-            CustomText.low("${shopModel.rating}/${shopModel.ratingCount} ratings", bold: true, textColor: Colors.grey),
-          ],
-        )
+        RatingText(
+          rating: shopModel.rating ?? 0,
+          ratingCount: shopModel.ratingCount,
+          size: Utils.lowIconSize,
+          color: Colors.grey,
+        ),
       ],
     );
   }
 
-  Stack imageSection() {
+  Stack get imageSection {
     return Stack(
       children: [
         SizedBox(
