@@ -5,4 +5,5 @@ class AppConstants {
   static String coffeSvg = "assets/image/svg/coffee_image.svg";
   static String milkSvg = "assets/image/svg/milk_image.svg";
   static String cakeSvg = "assets/image/svg/cake_image.svg";
+  static String adressIconsSvg = "assets/image/svg/adress_icons.svg";
 }

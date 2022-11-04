@@ -11,6 +11,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   final bool showLeadingBackIcon;
   final Widget? customLeadingButton;
   final bool centerTitle;
+  final bool isLeadingBlack;
   final Function()? onLeadingPressed;
   final bool? automaticallyImplyLeading;
 
@@ -23,6 +24,7 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
     this.onLeadingPressed,
     this.customLeadingButton,
     this.automaticallyImplyLeading,
+    this.isLeadingBlack = false,
   }) : super(key: key);
 
   @override
@@ -41,23 +43,25 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
     );
   }
 
-  InkWell get drawingButton => InkWell(
-        child: Padding(
-          padding: EdgeInsets.all(Utils.normalPadding),
-          child: Icon(Icons.menu, color: getReversedTextColor, size: Utils.extraHighIconSize),
-        ),
-        onTap: () {},
-      );
-
-  CustomIconButton leadingIcon() {
-    return CustomIconButton(
-      icon: Icons.arrow_back,
-      size: Utils.highIconSize,
-      onTap: onLeadingPressed ??
-          () {
-            Get.back();
-          },
-    );
+  Widget leadingIcon() {
+    return isLeadingBlack
+        ? IconButton(
+            onPressed: onLeadingPressed ??
+                () {
+                  Get.back();
+                },
+            icon: Icon(
+              Icons.arrow_back,
+              color: getTextColor,
+            ))
+        : CustomIconButton(
+            icon: Icons.arrow_back,
+            size: Utils.highIconSize,
+            onTap: onLeadingPressed ??
+                () {
+                  Get.back();
+                },
+          );
   }
 
   @override

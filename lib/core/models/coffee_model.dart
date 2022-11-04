@@ -7,6 +7,8 @@ class CoffeeModel {
   final double? price;
   final double? rating;
   final String? detail;
+  final List<String>? chooseList;
 
-  CoffeeModel(this.id, this.imageUrl, this.deliveryTime, this.name, this.coffeeShopName, this.price, this.rating, this.detail);
+  CoffeeModel(this.id, this.imageUrl, this.deliveryTime, this.name, this.coffeeShopName, this.price, this.rating, this.detail,
+      this.chooseList);
 }

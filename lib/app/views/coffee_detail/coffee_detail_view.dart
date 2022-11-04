@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:turkticaretnetcase/app/views/coffee_detail/widgets/category_icon.dart';
+import 'package:turkticaretnetcase/app/widgets/coffee_count_selection.dart';
+import 'package:turkticaretnetcase/app/views/coffee_detail/widgets/size_selection.dart';
+import 'package:turkticaretnetcase/app/widgets/buttons/custom_elevated_button.dart';
 
 import '../../../../../../core/utils/utils.dart';
 import '../../../core/constants/app_constants.dart';
@@ -30,10 +33,35 @@ class CoffeeDetailView extends GetView<CoffeeDetailController> {
               namePriceRatingSection,
               detailSection,
               categoriesSection,
+              SizeSelection(controller: controller),
+              addToCardAndCountSection,
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Row get addToCardAndCountSection {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Obx(
+          () => CoffeeCountSelection(
+            count: controller.selectedCount,
+            incerement: () => controller.countChange(increment: true),
+            reduce: () => controller.countChange(),
+          ),
+        ),
+        CustomElevatedButton(
+          onTap: controller.addToCardOnTap,
+          backgroundColor: buttonColor,
+          borderRadius: Utils.normalRadius,
+          child: Padding(
+              padding: EdgeInsets.all(Utils.highPadding),
+              child: CustomText.high("Add To Card", textColor: getReversedTextColor, bold: true)),
+        )
+      ],
     );
   }
 

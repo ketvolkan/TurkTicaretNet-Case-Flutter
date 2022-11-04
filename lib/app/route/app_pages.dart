@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../views/cart_detail/cart_detail_binding.dart';
+import '../views/cart_detail/cart_detail_view.dart';
 import '../views/coffee_detail/coffee_detail_binding.dart';
 import '../views/coffee_detail/coffee_detail_view.dart';
 import '../views/home/home_page_bindings.dart';
@@ -24,6 +26,12 @@ class AppPages {
       name: AppRoutes.CoffeeDetail,
       page: () => const CoffeeDetailView(),
       binding: CoffeeDetailBinding(),
+      transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.CartDetail,
+      page: () => const CartDetailView(),
+      binding: CartDetailBinding(),
       transition: Transition.cupertino,
     ),
   ];
