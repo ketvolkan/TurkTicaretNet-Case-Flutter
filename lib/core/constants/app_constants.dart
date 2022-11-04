@@ -7,5 +7,5 @@ class AppConstants {
   static String cakeSvg = "assets/image/svg/cake_image.svg";
   static String adressIconsSvg = "assets/image/svg/adress_icons.svg";
   static String orderSuccessGif = "assets/image/gif/order_success.gif";
-  static String orderProcessGif = "assets/gif/svg/order_process.gif";
+  static String orderProcessGif = "assets/image/gif/order_process.gif";
 }

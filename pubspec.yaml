@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^1.1.6
   readmore: ^2.2.0
   fluttertoast: ^8.1.1
+  carousel_slider: ^4.1.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

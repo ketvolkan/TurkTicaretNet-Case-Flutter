@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../views/cart_detail/cart_detail_binding.dart';
 import '../views/cart_detail/cart_detail_view.dart';
+import '../views/cart_process/cart_process_binding.dart';
+import '../views/cart_process/cart_process_view.dart';
 import '../views/coffee_detail/coffee_detail_binding.dart';
 import '../views/coffee_detail/coffee_detail_view.dart';
 import '../views/home/home_page_bindings.dart';
@@ -33,6 +35,11 @@ class AppPages {
       page: () => const CartDetailView(),
       binding: CartDetailBinding(),
       transition: Transition.cupertino,
+    ),
+    GetPage(
+      name: AppRoutes.CartProcess,
+      page: () => const CartProcessView(),
+      binding: CartProcessBinding(),
     ),
   ];
 }

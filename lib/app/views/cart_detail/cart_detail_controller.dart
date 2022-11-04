@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:turkticaretnetcase/app/route/app_routes.dart';
 
 import '../../../core/models/coffee_model.dart';
 
@@ -6,10 +7,13 @@ enum CartDetailState { Initial, Busy, Error, Loaded }
 
 class CartDetailController extends GetxController {
   CoffeeModel? coffeeModel;
+
   final Rx<int> _selectedCount = 1.obs;
   int get selectedCount => _selectedCount.value;
   set selectedCount(int val) => _selectedCount.value = val;
+
   int? selectedSize;
+
   @override
   void onInit() {
     fillArguments();
@@ -23,7 +27,14 @@ class CartDetailController extends GetxController {
     if (Get.arguments['selectedSize'] is int) selectedSize = Get.arguments['selectedSize'];
   }
 
-  void payNowButtonOnTap() {}
+  void payNowButtonOnTap() {
+    Get.toNamed(AppRoutes.CartProcess, arguments: {
+      "selectedSize": selectedSize,
+      "selectedCount": selectedCount,
+      "coffeeModel": coffeeModel,
+    });
+  }
+
   void countChange({bool increment = false}) {
     if (increment) {
       selectedCount++;
