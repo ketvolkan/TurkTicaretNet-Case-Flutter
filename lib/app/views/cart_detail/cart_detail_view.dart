@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/app/widgets/buttons/custom_square_icon_button.dart';
-import 'package:turkticaretnetcase/app/widgets/coffee_count_selection.dart';
-import 'package:turkticaretnetcase/app/widgets/custom_svg_image.dart';
-import 'package:turkticaretnetcase/core/constants/app_constants.dart';
+import '../../widgets/buttons/custom_square_icon_button.dart';
+import '../../widgets/coffee_count_selection.dart';
+import '../../widgets/custom_svg_image.dart';
+import '../../../core/constants/app_constants.dart';
 
 import '../../../../../../core/utils/utils.dart';
 import '../../../core/variables/colors.dart';
@@ -108,7 +108,7 @@ class CartDetailView extends GetView<CartDetailController> {
                           borderRadius: BorderRadius.circular(Utils.highRadius),
                           image: DecorationImage(
                               image: NetworkImage(controller.coffeeModel?.imageUrl ?? AppConstants.notFoundImage),
-                              fit: BoxFit.fitWidth),
+                              fit: BoxFit.cover),
                         ),
                       ),
                     ),

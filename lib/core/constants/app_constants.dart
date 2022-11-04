@@ -6,4 +6,6 @@ class AppConstants {
   static String milkSvg = "assets/image/svg/milk_image.svg";
   static String cakeSvg = "assets/image/svg/cake_image.svg";
   static String adressIconsSvg = "assets/image/svg/adress_icons.svg";
+  static String orderSuccessGif = "assets/image/gif/order_success.gif";
+  static String orderProcessGif = "assets/gif/svg/order_process.gif";
 }
