@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../views/all_shop/all_shop_binding.dart';
+import '../views/all_shop/all_shop_view.dart';
 import '../views/cart_detail/cart_detail_binding.dart';
 import '../views/cart_detail/cart_detail_view.dart';
 import '../views/cart_process/cart_process_binding.dart';
@@ -40,6 +42,11 @@ class AppPages {
       name: AppRoutes.CartProcess,
       page: () => const CartProcessView(),
       binding: CartProcessBinding(),
+    ),
+    GetPage(
+      name: AppRoutes.AllShop,
+      page: () => const AllShopView(),
+      binding: AllShopBinding(),
     ),
   ];
 }

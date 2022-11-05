@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../../core/utils/utils.dart';
 import '../../../core/variables/colors.dart';
-import '../../widgets/custom_text.dart';
+import '../../widgets/text/custom_text.dart';
 import 'splash_page_controller.dart';
 
 class SplashPageView extends GetView<SplashPageController> {

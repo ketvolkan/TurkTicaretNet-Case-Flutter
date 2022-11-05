@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
-import 'home_page_service.dart';
+
 import 'home_page_controller.dart';
+import 'home_page_service.dart';
 
 class HomePageBinding implements Bindings {
   @override

@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/app/views/coffee_detail/widgets/category_icon.dart';
-import 'package:turkticaretnetcase/app/widgets/coffee_count_selection.dart';
-import 'package:turkticaretnetcase/app/views/coffee_detail/widgets/size_selection.dart';
-import 'package:turkticaretnetcase/app/widgets/buttons/custom_elevated_button.dart';
 
 import '../../../../../../core/utils/utils.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../../core/variables/colors.dart';
+import '../../widgets/buttons/custom_elevated_button.dart';
 import '../../widgets/buttons/custom_icon_button.dart';
-import '../../widgets/custom_appbar.dart';
-import '../../widgets/custom_read_more_text.dart';
-import '../../widgets/custom_scaffold.dart';
-import '../../widgets/custom_text.dart';
-import '../../widgets/rating_text.dart';
+import '../../widgets/others/coffee_count_selection.dart';
+import '../../widgets/others/custom_appbar.dart';
+import '../../widgets/others/custom_scaffold.dart';
+import '../../widgets/text/custom_read_more_text.dart';
+import '../../widgets/text/custom_text.dart';
+import '../../widgets/text/rating_text.dart';
 import 'coffee_detail_controller.dart';
+import 'widgets/category_icon.dart';
+import 'widgets/size_selection.dart';
 
 class CoffeeDetailView extends GetView<CoffeeDetailController> {
   const CoffeeDetailView({Key? key}) : super(key: key);

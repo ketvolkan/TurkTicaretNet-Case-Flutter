@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/app/route/app_routes.dart';
-import 'package:turkticaretnetcase/core/utils/extensions.dart';
 
 import '../../../core/models/coffee_model.dart';
+import '../../../core/utils/extensions.dart';
+import '../../route/app_routes.dart';
 
 enum CoffeeDetailState { Initial, Busy, Error, Loaded }
 

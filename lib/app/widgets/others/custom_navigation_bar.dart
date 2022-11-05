@@ -1,9 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../core/variables/colors.dart';
-import 'package:flutter/material.dart';
-
 import '../../../../../core/utils/utils.dart';
+import '../../../core/variables/colors.dart';
 
 class CustomNavigationBar extends StatelessWidget implements PreferredSizeWidget {
   final int currentIndex;

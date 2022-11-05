@@ -1,8 +1,8 @@
 import 'package:async/async.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/utils.dart';
-import '../../../../../core/variables/colors.dart';
+import '../../../../../../core/utils/utils.dart';
+import '../../../../../../core/variables/colors.dart';
 
 class CustomSearchBar extends StatelessWidget {
   ///Cancelable operation ile klavyeden değer girme işlemi kontrol edilir

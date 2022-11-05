@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/core/utils/utils.dart';
+
+import '../../../core/utils/utils.dart';
 
 class CustomSquareIconButton extends StatelessWidget {
   final Function() onTap;

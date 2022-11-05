@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../core/utils/utils.dart';
-import '../../core/variables/colors.dart';
+import '../../../core/utils/utils.dart';
+import '../../../core/variables/colors.dart';
 import 'custom_text.dart';
 
 class RatingText extends StatelessWidget {

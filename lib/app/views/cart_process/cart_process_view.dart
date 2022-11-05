@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/app/route/app_routes.dart';
-import 'package:turkticaretnetcase/app/widgets/custom_text.dart';
-import 'package:turkticaretnetcase/core/constants/app_constants.dart';
 
 import '../../../../../../core/utils/utils.dart';
-import '../../widgets/custom_scaffold.dart';
+import '../../../core/constants/app_constants.dart';
+import '../../route/app_routes.dart';
+import '../../widgets/others/custom_scaffold.dart';
+import '../../widgets/text/custom_text.dart';
 import 'cart_process_controller.dart';
 
 class CartProcessView extends GetView<CartProcessController> {

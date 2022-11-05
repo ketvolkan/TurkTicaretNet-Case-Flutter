@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/utils/utils.dart';
-import '../../../widgets/custom_svg_image.dart';
+import '../../../widgets/images/custom_svg_image.dart';
 
 class CategoryIcon extends StatelessWidget {
   final String iconSvg;

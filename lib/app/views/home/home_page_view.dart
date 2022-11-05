@@ -4,10 +4,10 @@ import 'package:get/get.dart';
 import '../../../../../../core/utils/utils.dart';
 import '../../../core/variables/colors.dart';
 import '../../route/app_routes.dart';
-import '../../widgets/custom_navigation_bar.dart';
-import '../../widgets/custom_scaffold.dart';
-import '../../widgets/custom_search_bar.dart';
-import '../../widgets/custom_text.dart';
+import '../../widgets/fields/custom_search_bar.dart';
+import '../../widgets/others/custom_navigation_bar.dart';
+import '../../widgets/others/custom_scaffold.dart';
+import '../../widgets/text/custom_text.dart';
 import 'home_page_controller.dart';
 import 'widgets/coffee_list_item.dart';
 import 'widgets/shop_list_item.dart';
@@ -27,7 +27,7 @@ class HomePageView extends GetView<HomePageController> {
             SizedBox(height: Utils.lowPadding),
             searchBar,
             SizedBox(height: Utils.extraHighPadding),
-            popularCoffeSection,
+            popularCoffeeSection,
             SizedBox(height: Utils.lowPadding),
             nearestShopSection,
           ],
@@ -44,7 +44,7 @@ class HomePageView extends GetView<HomePageController> {
             children: [
               CustomText.extraHigh("Nearest coffee shops", bold: true),
               InkWell(
-                onTap: () {},
+                onTap: () => Get.toNamed(AppRoutes.AllShop),
                 child: CustomText("View All", textColor: Get.theme.primaryColor, bold: true),
               )
             ],
@@ -66,7 +66,7 @@ class HomePageView extends GetView<HomePageController> {
           ),
         ],
       );
-  Widget get popularCoffeSection => Column(
+  Widget get popularCoffeeSection => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomText.extraHigh("Popular Coffee", bold: true),

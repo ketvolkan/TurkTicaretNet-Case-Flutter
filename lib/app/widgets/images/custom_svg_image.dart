@@ -2,7 +2,7 @@ import 'package:flutter/animation.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../core/utils/utils.dart';
+import '../../../core/utils/utils.dart';
 
 class CustomSvgImage extends StatelessWidget {
   final String svgPath;

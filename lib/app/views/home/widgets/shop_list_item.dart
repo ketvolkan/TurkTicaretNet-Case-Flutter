@@ -7,8 +7,8 @@ import '../../../../core/constants/app_constants.dart';
 import '../../../../core/models/shop_model.dart';
 import '../../../../core/utils/utils.dart';
 import '../../../../core/variables/colors.dart';
-import '../../../widgets/custom_text.dart';
-import '../../../widgets/rating_text.dart';
+import '../../../widgets/text/custom_text.dart';
+import '../../../widgets/text/rating_text.dart';
 
 class ShopListItem extends StatelessWidget {
   final ShopModel shopModel;

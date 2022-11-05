@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:turkticaretnetcase/core/variables/colors.dart';
+
+import '../../../core/variables/colors.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   final Color? backgroundColor;

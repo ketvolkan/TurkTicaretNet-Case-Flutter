@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/app/widgets/buttons/custom_square_icon_button.dart';
-import 'package:turkticaretnetcase/app/widgets/custom_text.dart';
-import 'package:turkticaretnetcase/core/utils/utils.dart';
-import 'package:turkticaretnetcase/core/variables/colors.dart';
+
+import '../../../core/utils/utils.dart';
+import '../../../core/variables/colors.dart';
+import '../buttons/custom_square_icon_button.dart';
+import '../text/custom_text.dart';
 
 class CoffeeCountSelection extends StatelessWidget {
   final int count;

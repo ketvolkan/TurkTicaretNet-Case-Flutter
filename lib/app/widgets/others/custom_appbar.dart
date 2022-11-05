@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../core/utils/utils.dart';
-import '../../core/variables/colors.dart';
-import 'buttons/custom_icon_button.dart';
+import '../../../core/utils/utils.dart';
+import '../../../core/variables/colors.dart';
+import '../buttons/custom_icon_button.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   final List<Widget>? actions;

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:readmore/readmore.dart';
 
-import '../../core/variables/colors.dart';
+import '../../../core/variables/colors.dart';
 
 class CustomReadMoreText extends StatelessWidget {
   final String text;

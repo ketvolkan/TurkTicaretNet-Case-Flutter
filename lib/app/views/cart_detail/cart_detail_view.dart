@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../widgets/buttons/custom_square_icon_button.dart';
-import '../../widgets/coffee_count_selection.dart';
-import '../../widgets/custom_svg_image.dart';
-import '../../../core/constants/app_constants.dart';
 
 import '../../../../../../core/utils/utils.dart';
+import '../../../core/constants/app_constants.dart';
 import '../../../core/variables/colors.dart';
 import '../../widgets/buttons/custom_elevated_button.dart';
+import '../../widgets/buttons/custom_square_icon_button.dart';
 import '../../widgets/cards/custom_card.dart';
-import '../../widgets/custom_appbar.dart';
-import '../../widgets/custom_scaffold.dart';
-import '../../widgets/custom_text.dart';
+import '../../widgets/images/custom_svg_image.dart';
+import '../../widgets/others/coffee_count_selection.dart';
+import '../../widgets/others/custom_appbar.dart';
+import '../../widgets/others/custom_scaffold.dart';
+import '../../widgets/text/custom_text.dart';
 import 'cart_detail_controller.dart';
 
 class CartDetailView extends GetView<CartDetailController> {

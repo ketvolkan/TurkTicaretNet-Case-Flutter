@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/core/models/coffee_model.dart';
+
+import '../../../core/models/coffee_model.dart';
 
 enum CartProcessState { Initial, Busy, Error, Loaded }
 

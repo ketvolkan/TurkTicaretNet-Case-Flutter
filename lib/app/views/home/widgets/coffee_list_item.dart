@@ -6,8 +6,8 @@ import '../../../../core/models/coffee_model.dart';
 import '../../../../core/utils/utils.dart';
 import '../../../../core/variables/colors.dart';
 import '../../../widgets/buttons/custom_icon_button.dart';
-import '../../../widgets/custom_text.dart';
-import '../../../widgets/rating_text.dart';
+import '../../../widgets/text/custom_text.dart';
+import '../../../widgets/text/rating_text.dart';
 
 class CoffeeListItem extends StatelessWidget {
   final CoffeeModel coffeeModel;
