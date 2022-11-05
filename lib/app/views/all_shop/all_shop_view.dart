@@ -75,7 +75,8 @@ class AllShopView extends GetView<AllShopController> {
                     width: Get.width * 0.5,
                     child: ListTile(
                       title: CustomText.high(controller.shopList[controller.selectedId].name, bold: true),
-                      subtitle: CustomText(controller.shopList[controller.selectedId].name, bold: true, textColor: Colors.grey),
+                      subtitle:
+                          CustomText.low(controller.shopList[controller.selectedId].slogan, bold: true, textColor: Colors.grey),
                     ),
                   ),
                   RatingText(
