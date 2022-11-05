@@ -1,9 +1,9 @@
 # Turk Ticaret Net Case
 
-app->views klasörünün altında sayfalar bulunuyor her bir klasör bir sayfayı temsil ediyor o sayfada kullanılan widgetler,controller,service,view ve binding bu klasörün altında bulunuyur.
+app->views klasörünün altında sayfalar bulunuyor her bir klasör bir sayfayı temsil ediyor o sayfada kullanılan widgetler,controller,service,view ve binding bu klasörün altında bulunuyur.<br>
 
-app->core->models kullanılan modellerin olduğu klasör
-app->widgets Uygulamada kullanılan custom widgetlerin bulunduğu klasör
+app->core->models kullanılan modellerin olduğu klasör<br>
+app->widgets Uygulamada kullanılan custom widgetlerin bulunduğu klasör<br>
 
 Flutter version : 3.3.4<br>
 Dart version : 2.18.2<br>
