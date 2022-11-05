@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "211773176462",
+    "project_id": "turkticaretnetcase",
+    "storage_bucket": "turkticaretnetcase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211773176462:android:f6349943f8450e2d5227df",
+        "android_client_info": {
+          "package_name": "com.example.turkticaretnetcase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211773176462-sqlpgo0sp052smmqnmlnjf3e2f70rl20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnBQpJMB0NLelVCX4yfikIN-axK6JX7-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211773176462-sqlpgo0sp052smmqnmlnjf3e2f70rl20.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -78,4 +79,12 @@ extension CustomStringExtensions on String {
     if (length < n) return "";
     return substring(length - n);
   }
+}
+
+List<Map<String, dynamic>> convertToList(QuerySnapshot<Map<String, dynamic>> result) {
+  List<Map<String, dynamic>> data = [];
+  for (var element in result.docs) {
+    data.add(element.data());
+  }
+  return data;
 }

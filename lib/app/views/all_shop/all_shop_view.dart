@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:turkticaretnetcase/app/route/app_routes.dart';
 
 import '../../../core/constants/app_constants.dart';
 import '../../../core/utils/utils.dart';
@@ -44,7 +45,7 @@ class AllShopView extends GetView<AllShopController> {
   SizedBox get viewProductButton => SizedBox(
         width: Get.width,
         child: CustomElevatedButton(
-          onTap: () {},
+          onTap: () => Get.toNamed(AppRoutes.ShopDetail, arguments: {'shopModel': controller.shopList[controller.selectedId]}),
           backgroundColor: buttonColor,
           borderRadius: Utils.highRadius,
           child: Padding(
@@ -60,7 +61,9 @@ class AllShopView extends GetView<AllShopController> {
               ? Padding(
                   padding: EdgeInsets.all(Utils.normalPadding),
                   child: SizedBox(
-                      width: Get.width, child: CustomReadMoreText(text: controller.shopList[controller.selectedId].detail ?? "")),
+                    width: Get.width,
+                    child: CustomReadMoreText(text: controller.shopList[controller.selectedId].detail ?? ""),
+                  ),
                 )
               : const SizedBox();
         },
@@ -75,8 +78,11 @@ class AllShopView extends GetView<AllShopController> {
                     width: Get.width * 0.5,
                     child: ListTile(
                       title: CustomText.high(controller.shopList[controller.selectedId].name, bold: true),
-                      subtitle:
-                          CustomText.low(controller.shopList[controller.selectedId].slogan, bold: true, textColor: Colors.grey),
+                      subtitle: CustomText.low(
+                        controller.shopList[controller.selectedId].slogan,
+                        bold: true,
+                        textColor: Colors.grey,
+                      ),
                     ),
                   ),
                   RatingText(

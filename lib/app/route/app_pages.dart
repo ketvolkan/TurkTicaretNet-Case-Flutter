@@ -10,6 +10,8 @@ import '../views/coffee_detail/coffee_detail_binding.dart';
 import '../views/coffee_detail/coffee_detail_view.dart';
 import '../views/home/home_page_bindings.dart';
 import '../views/home/home_page_view.dart';
+import '../views/shop_detail/shop_detail_binding.dart';
+import '../views/shop_detail/shop_detail_view.dart';
 import '../views/splash/splash_page_binding.dart';
 import '../views/splash/splash_page_view.dart';
 import 'app_routes.dart';
@@ -47,6 +49,11 @@ class AppPages {
       name: AppRoutes.AllShop,
       page: () => const AllShopView(),
       binding: AllShopBinding(),
+    ),  
+    GetPage(
+      name: AppRoutes.ShopDetail,
+      page: () => const ShopDetailView(),
+      binding: ShopDetailBinding(),
     ),
   ];
 }

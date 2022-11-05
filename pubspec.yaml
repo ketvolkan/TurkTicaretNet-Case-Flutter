@@ -39,7 +39,8 @@ dependencies:
   readmore: ^2.2.0
   fluttertoast: ^8.1.1
   carousel_slider: ^4.1.1
-
+  cloud_firestore: ^4.0.4
+  firebase_core: ^2.1.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

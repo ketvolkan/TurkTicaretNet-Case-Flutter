@@ -67,7 +67,7 @@ class CartDetailView extends GetView<CartDetailController> {
           height: Get.height * 0.25,
           child: Column(
             children: [
-              additionText("Selected", (controller.coffeeModel?.id).toString(), false),
+              additionText("Selected", (controller.coffeeModel?.name).toString(), false),
               const Divider(thickness: 2),
               additionText("Subtotal", "₺${controller.coffeeModel?.price}", false),
               const Divider(thickness: 2),
@@ -93,45 +93,46 @@ class CartDetailView extends GetView<CartDetailController> {
   CustomCard get productSection => CustomCard(
         isPaddingZero: true,
         child: SizedBox(
-            width: Get.width,
-            height: Get.height * 0.125,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    SizedBox(
-                      height: Get.height * 0.125,
-                      width: Get.width * 0.2,
-                      child: DecoratedBox(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(Utils.highRadius),
-                          image: DecorationImage(
-                              image: NetworkImage(controller.coffeeModel?.imageUrl ?? AppConstants.notFoundImage),
-                              fit: BoxFit.cover),
-                        ),
+          width: Get.width,
+          height: Get.height * 0.125,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  SizedBox(
+                    height: Get.height * 0.125,
+                    width: Get.width * 0.2,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(Utils.highRadius),
+                        image: DecorationImage(
+                            image: NetworkImage(controller.coffeeModel?.imageUrl ?? AppConstants.notFoundImage),
+                            fit: BoxFit.cover),
                       ),
                     ),
-                    SizedBox(
-                      width: Get.width * 0.38,
-                      child: ListTile(
-                          title: FittedBox(child: CustomText.high(controller.coffeeModel?.name, bold: true)),
-                          subtitle: CustomText((controller.coffeeModel?.chooseList ?? [])[controller.selectedSize ?? 0],
-                              textColor: Colors.grey)),
+                  ),
+                  SizedBox(
+                    width: Get.width * 0.38,
+                    child: ListTile(
+                        title: FittedBox(child: CustomText.high(controller.coffeeModel?.name, bold: true)),
+                        subtitle: CustomText((controller.coffeeModel?.chooseList ?? [])[controller.selectedSize ?? 0],
+                            textColor: Colors.grey)),
+                  ),
+                  Obx(
+                    () => CoffeeCountSelection(
+                      count: controller.selectedCount,
+                      incerement: () => controller.countChange(increment: true),
+                      reduce: () => controller.countChange(),
+                      padding: Utils.normalPadding,
+                      dimension: Utils.extraHighIconSize * 1.2,
                     ),
-                    Obx(
-                      () => CoffeeCountSelection(
-                        count: controller.selectedCount,
-                        incerement: () => controller.countChange(increment: true),
-                        reduce: () => controller.countChange(),
-                        padding: Utils.normalPadding,
-                        dimension: Utils.extraHighIconSize * 1.2,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            )),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       );
 
   CustomCard get locationSection => CustomCard(

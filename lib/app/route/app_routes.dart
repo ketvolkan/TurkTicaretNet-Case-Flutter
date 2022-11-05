@@ -5,4 +5,5 @@ class AppRoutes {
   static const String CartDetail = "/cart_detail";
   static const String CartProcess = "/cart_process";
   static const String AllShop = "/all_shop";
+  static const String ShopDetail = "/shop_detail";
 }
