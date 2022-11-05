@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/core/models/shop_model.dart';
-import 'package:turkticaretnetcase/core/utils/utils.dart';
+import '../../../core/models/shop_model.dart';
+import '../../../core/utils/utils.dart';
 
 class AllShopService extends GetxService {
   Future<List<ShopModel>> getAllShop() async {

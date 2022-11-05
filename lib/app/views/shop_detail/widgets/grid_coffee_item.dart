@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/app/widgets/text/custom_text.dart';
+import '../../../widgets/text/custom_text.dart';
 
 import '../../../../core/constants/app_constants.dart';
 import '../../../../core/models/coffee_model.dart';

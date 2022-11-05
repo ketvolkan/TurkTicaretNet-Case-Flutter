@@ -4,7 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:turkticaretnetcase/app/route/app_routes.dart';
+import '../../route/app_routes.dart';
 
 import '../../../core/constants/app_constants.dart';
 import '../../../core/utils/utils.dart';

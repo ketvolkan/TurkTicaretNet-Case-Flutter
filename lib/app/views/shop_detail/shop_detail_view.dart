@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/app/views/shop_detail/widgets/grid_coffee_item.dart';
-import 'package:turkticaretnetcase/app/views/shop_detail/widgets/product_category_choose.dart';
-import 'package:turkticaretnetcase/app/widgets/cards/custom_card.dart';
-import 'package:turkticaretnetcase/core/constants/app_constants.dart';
-import 'package:turkticaretnetcase/core/variables/colors.dart';
+import 'widgets/grid_coffee_item.dart';
+import 'widgets/product_category_choose.dart';
+import '../../widgets/cards/custom_card.dart';
+import '../../../core/constants/app_constants.dart';
+import '../../../core/variables/colors.dart';
 
 import '../../../core/utils/utils.dart';
 import '../../widgets/others/custom_appbar.dart';

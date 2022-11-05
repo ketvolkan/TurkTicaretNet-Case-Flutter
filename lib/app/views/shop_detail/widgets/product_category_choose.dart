@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:turkticaretnetcase/app/views/shop_detail/shop_detail_controller.dart';
-import 'package:turkticaretnetcase/app/widgets/text/custom_text.dart';
-import 'package:turkticaretnetcase/core/utils/utils.dart';
+import '../shop_detail_controller.dart';
+import '../../../widgets/text/custom_text.dart';
+import '../../../../core/utils/utils.dart';
 
 class ProductCategoryChoose extends StatelessWidget {
   final List<String> categories;

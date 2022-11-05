@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:turkticaretnetcase/app/views/home/home_page_service.dart';
+import 'home_page_service.dart';
 
 import '../../../core/models/coffee_model.dart';
 import '../../../core/models/shop_model.dart';

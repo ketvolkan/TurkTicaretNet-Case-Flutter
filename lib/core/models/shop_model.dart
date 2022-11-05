@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:turkticaretnetcase/core/models/coffee_model.dart';
+import 'coffee_model.dart';
 
 class ShopModel {
   String? imageUrl;
