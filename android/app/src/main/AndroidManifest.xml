@@ -6,6 +6,8 @@
         android:label="turkticaretnetcase"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+         <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyB1q41QXbo0cJSw1yvY2Jo4D_Aep76gGxc"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

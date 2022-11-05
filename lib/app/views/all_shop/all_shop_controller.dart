@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../../../core/models/shop_model.dart';
 import 'all_shop_service.dart';
@@ -19,7 +20,10 @@ class AllShopController extends GetxController {
   final Rx<int> _selectedId = 0.obs;
   int get selectedId => _selectedId.value;
   set selectedId(int val) => _selectedId.value = val;
-
+  CameraPosition kGooglePlex = const CameraPosition(
+    target: LatLng(40.991039, 28.649815),
+    zoom: 14.4746,
+  );
   @override
   void onReady() async {
     await getShopList();

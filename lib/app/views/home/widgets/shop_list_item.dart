@@ -37,6 +37,7 @@ class ShopListItem extends StatelessWidget {
       children: [
         SizedBox(
           width: Get.width * 0.42,
+          height: Get.width * 0.4,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(Utils.highRadius),
             child: Image.network(shopModel.imageUrl ?? AppConstants.notFoundImage, fit: BoxFit.cover),
