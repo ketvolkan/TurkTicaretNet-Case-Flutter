@@ -5,7 +5,7 @@ import '../../../core/utils/utils.dart';
 import '../../../core/variables/colors.dart';
 import '../buttons/custom_icon_button.dart';
 
-class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
+class CustomAppBar extends StatelessWidget {
   final List<Widget>? actions;
   final Widget? title;
   final bool showLeadingBackIcon;

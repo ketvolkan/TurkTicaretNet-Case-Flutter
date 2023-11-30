@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import '../../../../../core/utils/utils.dart';
 
 class CustomScaffold extends StatelessWidget {
-  final PreferredSizeWidget? appBar;
+  final Widget? appBar;
   final Widget? body;
   final EdgeInsetsGeometry? bodyPadding;
   final bool useSingleChildScrollView;
@@ -42,7 +42,7 @@ class CustomScaffold extends StatelessWidget {
         extendBodyBehindAppBar: extendBodyBehindAppBar,
         extendBody: extendBody,
         resizeToAvoidBottomInset: resizeToAvoidBottomInset,
-        appBar: appBar,
+        appBar: appBar == null ? null : PreferredSize(preferredSize: Size.fromHeight(Utils.appBarHeight), child: appBar!),
         bottomNavigationBar: bottomNavigationBar,
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: useSingleChildScrollView
