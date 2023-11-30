@@ -39,8 +39,8 @@ dependencies:
   readmore: ^2.2.0
   fluttertoast: ^8.1.1
   carousel_slider: ^4.1.1
-  cloud_firestore: ^4.0.4
-  firebase_core: ^2.1.1
+  cloud_firestore: ^4.13.3
+  firebase_core: ^2.21.0
   google_maps_flutter: ^2.2.1
 dev_dependencies:
   flutter_test:
